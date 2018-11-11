@@ -1,4 +1,8 @@
-﻿CREATE PROCEDURE InsertOrUpdateToken
+﻿IF (OBJECT_ID('InsertOrUpdateToken') IS NOT NULL)
+    DROP PROCEDURE InsertOrUpdateToken
+GO
+
+CREATE PROCEDURE InsertOrUpdateToken
 (
     @SerialNumber VARCHAR(24),
     @Token VARCHAR(64)	
@@ -39,4 +43,5 @@ SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
     END CATCH;
 END
 GO
-drop PROCEDURE InsertOrUpdateToken
+exec InsertOrUpdateToken N'abc123', N'token1'
+select * from Tokens

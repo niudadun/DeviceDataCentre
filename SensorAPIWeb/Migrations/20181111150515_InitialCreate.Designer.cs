@@ -10,7 +10,7 @@ using SensorAPIWeb.Domain;
 namespace SensorAPIWeb.Migrations
 {
     [DbContext(typeof(SensorAPIDbContext))]
-    [Migration("20181111130942_InitialCreate")]
+    [Migration("20181111150515_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
