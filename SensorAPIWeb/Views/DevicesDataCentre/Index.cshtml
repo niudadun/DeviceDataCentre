@@ -1,0 +1,138 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="container-full">
+    
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    API test
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <h3>CSV File Upload</h3>
+                            <div>
+                                <form method="POST" action="#" enctype="multipart/form-data">
+                                    <div class="form-group">
+                                        <div class="input-group input-file" name="Fichier1">
+                                            <input type="text" class="form-control" placeholder='Choose a file...' />
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-default btn-choose pull-left" type="button">Choose</button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary " id="uploadFile">Submit</button>
+                                        <button type="reset" class="btn btn-danger">Reset</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div id="messageInfo" class="alert alert-danger" role="alert" style="visibility: hidden">
+                                Loading from API...
+                            </div>
+                            <h3>Deivce simulator  -  API Test</h3>
+                            <h5>Input Token for Authentication</h5>
+                            <div class="form-group">
+                                <label>Token</label>
+                                <div class="space5"></div>
+                                <input id="token" class="form-control">
+                            </div>
+                            <div class="space10"></div>
+                            <h3>Sensor switch on PUT request simulating</h3>
+                            <div class="form-group">
+                                <label>Device Serial Number</label>
+                                <div class="space5"></div>
+                                <input id="serialOn" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Voltage</label>
+                                <div class="space5"></div>
+                                <input id="voltage" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Firmware Version</label>
+                                <div class="space5"></div>
+                                <input id="version" class="form-control">
+                            </div>
+                            <div class="submitBtn">
+                                <button id="deviceSwitchOn" type="submit" class="btn btn-primary">Update Device Info</button>
+                            </div>
+                            <div class="space10"></div>
+                            <h3>Sensor Update details(Temperature,Humidity, etc...) simulating</h3>
+                            <div class="form-group">
+                                <label>Device Serial Number</label>
+                                <div class="space5"></div>
+                                <input id="serialUpdate" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Temperature</label>
+                                <div class="space5"></div>
+                                <input id="temperatureUpdate" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Humidity</label>
+                                <div class="space5"></div>
+                                <input id="humidityUpdate" class="form-control">
+                            </div>
+                            <div class="submitBtn">
+                                <button id="deviceUpdate" type="submit" class="btn btn-primary">Update Device Details</button>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-5">
+                            <h3>Get Device latest Details</h3>
+                            <div class="form-group">
+                                <label>Device Serial Number</label>
+                                <div class="space5"></div>
+                                <input id="serial" class="form-control">
+                            </div>
+                            <div class="submitBtn">
+                                <button id="GetLatestDevice" type="submit" class="btn btn-primary">Get Data</button>
+                            </div>
+                            <h3>Device Latest Details</h3>
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" class="col-sm-4">Serial Number</th>
+                                        <td id="serialbumber"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Temperature</th>
+                                        <td id="temperature"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Humidity</th>
+                                        <td id="humidity"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Update Time</th>
+                                        <td id="updatetime"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <h3>Get Device updated history</h3>
+                            <div class="form-group">
+                                <label>Device Serial Number</label>
+                                <div class="space5"></div>
+                                <input id="serialNB" class="form-control">
+                            </div>
+                            <div class="submitBtn">
+                                <button id="GetHistory" type="submit" class="btn btn-primary">Get History</button>
+                            </div>
+                            <h3>Return Device details in Json</h3>
+                            <pre id="returnData" style="height: 400px;"></pre>
+
+                        </div>
+                            <!-- /.panel-body -->
+                        </div>
+                    <!-- /.panel -->
+                </div>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+    </div>
+</div>

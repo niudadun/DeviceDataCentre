@@ -1,0 +1,83 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+/*input,
+select,
+textarea {
+    max-width: 280px;
+}*/
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        font-size: 100px;
+        text-align: right;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        outline: none;
+        background: white;
+        cursor: inherit;
+        display: block;
+    }
+
+.file-field.big .file-path-wrapper {
+    height: 3.2rem;
+}
+.file-field.big .file-path-wrapper .file-path {
+    height: 3rem;
+}
+
+
+.primary-btn {
+    line-height: 40px;
+    padding: 0 40px;
+    border-radius: 20px;
+    background: transparent;
+    border: 1px solid #00ff8c;
+    color: #222222;
+    display: inline-block;
+    font-weight: 600;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+.primary-btn:focus {
+        outline: none;
+}
+.primary-btn.banner-btn {
+        color: #fff;
+        margin-top: 60px;
+}
+.primary-btn span {
+        margin-left: 15px;
+}
+.primary-btn:hover {
+    background: #00ff8c;
+    color: #fff;
+    box-shadow: 0px 10px 20px 0px rgba(60, 64, 143, 0.2);
+    text-decoration: none;
+}
